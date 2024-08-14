@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RePylot: Online Chat</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    <link rel="icon" href="resources/repylot_logo.webp" type="image/png">
+
+</head>
+<body>
+    <!-- Vertical Sidebar Menu -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#python"><i class="devicon-python-plain"></i></a></li>
+            <li><a href="#javascript"><i class="devicon-javascript-plain"></i></a></li>
+            <li><a href="#java"><i class="devicon-java-plain"></i></a></li>
+            <li><a href="#cpp"><i class="devicon-cplusplus-plain"></i></a></li>
+            <li><a href="#ruby"><i class="devicon-ruby-plain"></i></a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="resources/repylot_logo.webp" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="https://github.com/repylot/CodeGenerators">GitHub</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box">
+            <div class="message bot-message">
+                <p>Hello! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="js/generateAnswer.js"></script>
+</body>
+</html>
