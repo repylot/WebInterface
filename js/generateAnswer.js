@@ -25,7 +25,7 @@ function createBotChatEntry(generatedMessage) {
 
     const newMessage = document.createElement('div');
     newMessage.classList.add('message', 'bot-message');
-    newMessage.innerHTML = `<p>${generatedMessage}</p>`
+    newMessage.innerHTML = `<p>for key in key.values():<br>&nbsp;&nbsp;&nbsp;&nbsp;if self.open_file(filename)</p>`
 
     chatBox.appendChild(newMessage, generatedMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
@@ -37,7 +37,7 @@ function createUserChatEntry(messageText) {
 
     const newMessage = document.createElement('div');
     newMessage.classList.add('message', 'user-message');
-    newMessage.innerHTML = `<p>${messageText}</p>`;
+    newMessage.innerHTML = `<p><i class="fas fa-pencil-alt edit-button" onclick="editMessage(this)"></i>${messageText}</p>`;
 
     chatBox.appendChild(newMessage, messageText);
     chatBox.scrollTop = chatBox.scrollHeight;

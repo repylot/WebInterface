@@ -164,6 +164,35 @@ body {
     align-self: flex-start;
 }
 
+.edit-button {
+    color: #007bff; /* Change the icon color */
+    background-color: #fff; /* White background */
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+    align-self: center;
+    padding: 5px; /* Add padding for spacing */
+    border-radius: 50%; /* Fully rounded corners */
+    border: 1px solid #007bff; /* Optional: Add a border matching the icon color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+}
+
+.edit-button:hover {
+    color: #0056b3; /* Darker color on hover */
+    background-color: #eaeaea; /* Light grey background on hover */
+}
+
+/* Style for the edit input field */
+.edit-input {
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+
 /* Chat Input */
 .chat-input {
     display: flex;
