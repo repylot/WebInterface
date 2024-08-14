@@ -3,4 +3,4 @@
 
 <br>
 
-<p align="center"><img src="resources/screenshot_main.png" width="7%"></p>
+<p align="center"><img src="resources/screenshot_main.png" width="80%"></p>
