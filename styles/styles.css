@@ -107,15 +107,108 @@ nav ul li a:hover {
     color: #007bff;
 }
 
+/* Chat Wrapper */
+.chat-wrapper {
+    position: fixed;
+    width: 65%; /* Adjust width if needed */
+    max-width: 70%; /* Adjust width if needed */
+    margin-top: 90px;
+}
+
+/* Chat Container */
 .chat-container {
-    max-width: 70%; /* Adjust width */
     background-color: #ffffff;
     border: 1px solid #eaeaea;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    height: 80vh; /* Adjust height */
-    width: 65%;
+    height: 70vh; /* Adjust height */
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Toggle Button Styles */
+.toggle-container {
+    position: absolute;
+    top: -40px; /* Adjust based on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001; /* Ensure it’s above the chat container */
+}
+
+.toggle-button {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 150px;
+    background-color: #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-option.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.toggle-option:not(.active):hover {
+    background-color: #f0f0f0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Editor Area */
+.editor-area {
+    display: none; /* Initially hidden */
+    padding: 10px;
+    border-top: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+    height: 70vh;
+    margin: 20px auto;
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.editor-area textarea {
+    width: 100%;
+    height: calc(100% - 50px); /* Adjust height to leave space for the save button */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    scrollbar-color: #afbac778 #f0f0f0;
+}
+
+.editor-area button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.editor-area button:hover {
+    background-color: #0056b3;
 }
 
 /* Adjust layout to account for sidebar */
@@ -131,38 +224,69 @@ body {
     flex-direction: column;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .message {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 6px;
     max-width: 80%;
+    word-wrap: break-word; /* Ensures long words break and wrap properly */
+    overflow-wrap: break-word; /* Ensures that long words or URLs break properly */
     opacity: 0;
     animation: fadeInUp 0.3s ease forwards;
+    white-space: pre-wrap; /* Preserves line breaks and whitespace */
 }
 
+/* Ensure user messages are styled distinctly */
 .user-message {
     background-color: #007bff;
     color: #ffffff;
     align-self: flex-end;
 }
 
+/* Ensure bot messages are styled distinctly */
 .bot-message {
     background-color: #eaeaea;
     color: #333;
     align-self: flex-start;
 }
+
+/* Estilo para el contenedor del chat */
+.chat-box {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin; /* Para navegadores basados en Mozilla */
+    scrollbar-color: #afbac778 #f0f0f0; /* Color del pulgar y del fondo en Firefox */
+}
+
+/* Personalización de la scrollbar para navegadores basados en WebKit */
+.chat-box::-webkit-scrollbar {
+    width: 8px; /* Ancho de la scrollbar */
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color de fondo de la scrollbar */
+    border-radius: 10px; /* Bordes redondeados del track */
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #afbac778; /* Color del pulgar de la scrollbar */
+    border-radius: 10px; /* Bordes redondeados del pulgar */
+    border: 2px solid #f0f0f0; /* Espacio alrededor del pulgar */
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; /* Color del pulgar en hover */
+}
+
+/* Firefox scrollbar customization */
+.chat-box {
+    scrollbar-width: thin; /* Ancho de la scrollbar */
+    scrollbar-color: #afbac778 #f0f0f0; /* Color del pulgar y del fondo */
+}
+
 
 .edit-button {
     color: #007bff; /* Change the icon color */
@@ -182,16 +306,18 @@ body {
     background-color: #eaeaea; /* Light grey background on hover */
 }
 
-/* Style for the edit input field */
-.edit-input {
+.save-button {
+    color: #007bff; /* Change the icon color */
+    background-color: #dddddd; /* White background */
+    cursor: pointer;
+    margin-right: 10px;
     font-size: 14px;
-    padding: 5px;
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+    align-self: center;
+    padding: 5px; /* Add padding for spacing */
+    border-radius: 50%; /* Fully rounded corners */
+    border: 1px solid #007bff; /* Optional: Add a border matching the icon color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
 }
-
 
 /* Chat Input */
 .chat-input {

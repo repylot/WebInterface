@@ -25,7 +25,7 @@ function createBotChatEntry(generatedMessage) {
 
     const newMessage = document.createElement('div');
     newMessage.classList.add('message', 'bot-message');
-    newMessage.innerHTML = `<p>for key in key.values():<br>&nbsp;&nbsp;&nbsp;&nbsp;if self.open_file(filename)</p>`
+    newMessage.innerHTML = `<p>${generatedMessage}</p>`
 
     chatBox.appendChild(newMessage, generatedMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
@@ -64,4 +64,8 @@ document.getElementById('message-input').addEventListener('keydown', function(ev
     if (event.key === 'Enter') {
         sendMessage();
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    createBotChatEntry('Hello! What would you like me to code today?');
 });
