@@ -3,4 +3,4 @@
 
 <br>
 
-[![Watch the video](resources/scs0.png)](https://vimeo.com/998935351)
+https://github.com/user-attachments/assets/838e2b45-ba97-412e-bac9-9ae31021c195
