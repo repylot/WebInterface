@@ -3,7 +3,4 @@
 
 <br>
 
-<p align="center"><img src="resources/scs0.png" width="90%"></p>
-<p align="center"><img src="resources/scs1.png" width="90%"></p>
-<p align="center"><img src="resources/scs3.png" width="90%"></p>
-<p align="center"><img src="resources/scs4.png" width="90%"></p>
+[![Watch the video](resources/scs0.png)](https://vimeo.com/998935351)
