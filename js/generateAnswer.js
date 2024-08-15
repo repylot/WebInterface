@@ -25,8 +25,9 @@ function createBotChatEntry(generatedMessage) {
 
     const newMessage = document.createElement('div');
     newMessage.classList.add('message', 'bot-message');
-    newMessage.innerHTML = `<p>${generatedMessage}</p>`
-
+    
+    newMessage.innerHTML = `<p>${generatedMessage}</p>`;
+    
     chatBox.appendChild(newMessage, generatedMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
 }

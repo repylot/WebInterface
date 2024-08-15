@@ -3,4 +3,7 @@
 
 <br>
 
-<p align="center"><img src="resources/scs_1.png" width="90%"></p>
+<p align="center"><img src="resources/scs2.png" width="90%"></p>
+<p align="center"><img src="resources/scs1.png" width="90%"></p>
+<p align="center"><img src="resources/scs3.png" width="90%"></p>
+<p align="center"><img src="resources/scs4.png" width="90%"></p>

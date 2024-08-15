@@ -154,7 +154,7 @@ nav ul li a:hover {
 }
 
 .toggle-option.active {
-    background-color: #007bff;
+    background-color: #a74439;
     color: #ffffff;
 }
 
@@ -190,10 +190,17 @@ nav ul li a:hover {
     height: calc(100% - 50px); /* Adjust height to leave space for the save button */
     border: 1px solid #ddd;
     border-radius: 4px;
+    border: transparent;
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
     scrollbar-color: #afbac778 #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.editor-area textarea:focus {
+    outline: none;
 }
 
 .editor-area button {
@@ -238,9 +245,15 @@ body {
 
 /* Ensure user messages are styled distinctly */
 .user-message {
-    background-color: #007bff;
+    background-color: #c38078;
     color: #ffffff;
     align-self: flex-end;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+.user-message:hover {
+    background-color: #bea5a2;
+    transition: background-color 0.6s, color 0.6s;
 }
 
 /* Ensure bot messages are styled distinctly */
@@ -278,7 +291,7 @@ body {
 }
 
 .chat-box::-webkit-scrollbar-thumb:hover {
-    background-color: #0056b3; /* Color del pulgar en hover */
+    background-color: #c38078; /* Color del pulgar en hover */
 }
 
 /* Firefox scrollbar customization */
@@ -289,7 +302,7 @@ body {
 
 
 .edit-button {
-    color: #007bff; /* Change the icon color */
+    color: #a74439; /* Change the icon color */
     background-color: #fff; /* White background */
     cursor: pointer;
     margin-right: 10px;
@@ -297,17 +310,17 @@ body {
     align-self: center;
     padding: 5px; /* Add padding for spacing */
     border-radius: 50%; /* Fully rounded corners */
-    border: 1px solid #007bff; /* Optional: Add a border matching the icon color */
+    border: 1px solid #a74439; /* Optional: Add a border matching the icon color */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
 }
 
 .edit-button:hover {
-    color: #0056b3; /* Darker color on hover */
+    color: #9a9898; /* Darker color on hover */
     background-color: #eaeaea; /* Light grey background on hover */
 }
 
 .save-button {
-    color: #007bff; /* Change the icon color */
+    color: #a74439; /* Change the icon color */
     background-color: #dddddd; /* White background */
     cursor: pointer;
     margin-right: 10px;
@@ -315,7 +328,7 @@ body {
     align-self: center;
     padding: 5px; /* Add padding for spacing */
     border-radius: 50%; /* Fully rounded corners */
-    border: 1px solid #007bff; /* Optional: Add a border matching the icon color */
+    border: 1px solid #a74439; /* Optional: Add a border matching the icon color */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
 }
 
@@ -334,7 +347,7 @@ body {
 }
 
 .chat-input button {
-    background-color: #007bff;
+    background-color: #a74439;
     color: white;
     border: none;
     padding: 15px 20px;
@@ -343,5 +356,5 @@ body {
 }
 
 .chat-input button:hover {
-    background-color: #0056b3;
+    background-color: #8e9cab;
 }
